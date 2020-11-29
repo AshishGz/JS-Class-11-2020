@@ -1,0 +1,19 @@
+body{
+    background: aquamarine;
+}
+button{
+    background: black;
+}
+p{
+    font-size: 40px;
+}
+.my_button{
+    background: aquamarine;
+}
+#my_btn1{
+    background: blue;
+}
+#myDiv p{
+    font-size: 20px;
+    color: blue;
+}
