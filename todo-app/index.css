@@ -1,0 +1,33 @@
+#note{
+    width: 100%;
+}
+#noteBtn{
+    background: green;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 1px solid green;
+    cursor: pointer;
+}
+#noteBtn:hover{
+    background: #fff;
+    color: green;
+    border: 1px solid green;
+}
+#myNotes{
+  margin-top: 40px;
+}
+#myNotes div{
+    border-radius: 5px;
+    background: #f5f5f5;
+    padding: 8px 12px;
+    margin-top: 10px;
+
+}
+.delete{
+    color:#824141;
+    cursor: pointer;
+}
+.delete:hover{
+    text-decoration: underline;
+}
