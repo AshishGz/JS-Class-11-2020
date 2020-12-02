@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<script src="index.js"></script>
+<body>
+<button id="btn">Event Listener</button>
+<div id="newDiv"
+onmouseover="document.getElementById('newDiv')
+.style.height='500px';"
+     onmouseout="document.getElementById('newDiv')
+.style.height='100px'"
+ style="height: 100px;width: 100px;background: green">
+    <input id="foc" type="text" onfocus="document.
+    getElementById('foc').style.background='blue';">
+
+</div>
+<script>
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click',(event)=>{
+        filterEx2();
+    });
+</script>
+
+</body>
+</html>

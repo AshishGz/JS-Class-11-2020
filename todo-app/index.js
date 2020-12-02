@@ -4,7 +4,7 @@ let my_notes=localStorage.getItem(MY_NOTE)?
     JSON.parse(
     localStorage.getItem(MY_NOTE)):[];
 window.onload=function () {
-  onGetSavedNotes();
+  onGetSavedNotes(my_notes);
 };
 function onAddNote() {
     let myNote=
@@ -19,11 +19,10 @@ function onAddNote() {
         JSON.stringify(my_notes));
     document.
     getElementById('note').value='';
-    onGetSavedNotes();
+    onGetSavedNotes(my_notes);
 }
 
-function onGetSavedNotes() {
-    let notes=my_notes;
+function onGetSavedNotes(notes) {
     let my_notes_html='';
     notes.forEach(function (val,index) {
         if(val) {
@@ -52,6 +51,20 @@ function getUserReadableDate(date) {
 function deleteNote(index) {
     delete my_notes[index];
     localStorage.setItem(MY_NOTE,JSON.stringify(my_notes));
-    onGetSavedNotes();
+    onGetSavedNotes(my_notes);
 
 }
+
+function onSearchItem() {
+let search_key=document.getElementById('searchText').value;
+let newArray=my_notes.filter(
+    note=>note.value.toLowerCase().indexOf(search_key)!=-1);
+    onGetSavedNotes(newArray);
+console.log(my_notes);
+}
+function clearSearch() {
+    onGetSavedNotes(my_notes);
+}
+
+
+
