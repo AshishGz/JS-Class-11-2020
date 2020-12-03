@@ -1,0 +1,17 @@
+var API_URL='http://newsapi.org/v2/everything?q=bitcoin&from=2020-08-14&sortBy=publishedAt&apiKey=9b017d9c85e140f58bd094de3f1b99d3';
+window.onload=function () {
+    getNewsData();
+};
+function  getNewsData() {
+    fetch(API_URL,{
+        method:'GET',
+    }).
+    then(response=>response.json()).
+    then(data=>diplayDatFromAPI(data)).
+    catch(function (error) {
+        document.getElementById('loader').style.display='none';
+        document.getElementById('error').style.display='block';
+
+    });
+
+}
